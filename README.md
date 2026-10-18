@@ -1,4 +1,4 @@
-# oaqjp-final-project-emb-ai
+# FINAL PROJECT
 
 ## Emotion Detection Web App
 
