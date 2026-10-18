@@ -1,8 +1,8 @@
-# FINAL PROJECT
+# oaqjp-final-project-emb-ai
 
-# Emotion Detection Web App
+## Emotion Detection Web App
 
-An AI-based Flask web application that analyzes customer feedback text and identifies the emotion it expresses. It returns scores for **anger, disgust, fear, joy, and sadness**, plus the **dominant emotion**.
+An AI-based Flask web application that analyzes customer feedback text and identifies the emotion it expresses. It returns scores for anger, disgust, fear, joy, and sadness, plus the dominant emotion.
 
 Built for an e-commerce company to support analytics on customer feedback for its signature products.
 
@@ -12,12 +12,12 @@ Built for an e-commerce company to support analytics on customer feedback for it
 - Packaged as an importable Python module (`EmotionDetection`)
 - Flask web interface for entering feedback and viewing results
 - Error handling for blank or invalid input
-- Unit tests and static code analysis (pylint, 10/10)
+- Unit tests and static code analysis (pylint 10/10)
 
 ## Project Structure
 
 ```
-<repo-name>/
+oaqjp-final-project-emb-ai/
 ├── EmotionDetection/
 │   ├── __init__.py
 │   └── emotion_detection.py
@@ -32,63 +32,47 @@ Built for an e-commerce company to support analytics on customer feedback for it
 
 ## Requirements
 
-- Python 3.8+
+- Python 3
 - `requests`
 - `flask`
 
-Install dependencies:
-
-```bash
+```
 python3 -m pip install requests flask
 ```
 
 ## Usage
 
-### Run the web app
+Run the web app:
 
-```bash
+```
 python3 server.py
 ```
 
-Open `http://localhost:5000`, enter a statement, and click **Run Emotion Detection**.
+Open the app on port 5000, enter a statement, and click **Run Emotion Detection**. Blank input returns `Invalid text! Please try again!`
 
-### Use the function directly
+Use the function directly:
 
 ```python
 from EmotionDetection.emotion_detection import emotion_detector
 
-emotion_detector("I love this product!")
+print(emotion_detector("I love my life"))
 ```
 
 Example output:
 
-```python
-{'anger': 0.0059, 'disgust': 0.0007, 'fear': 0.0042,
- 'joy': 0.9686, 'sadness': 0.0225, 'dominant_emotion': 'joy'}
+```
+{'anger': 0.006274985, 'disgust': 0.0025598293, 'fear': 0.009251528, 'joy': 0.9680386, 'sadness': 0.049744144, 'dominant_emotion': 'joy'}
 ```
 
-### Example web response
+## Running the Tests
 
 ```
-For the given statement, the system response is 'anger': 0.0057, 'disgust': 0.0011,
-'fear': 0.0039, 'joy': 0.9849 and 'sadness': 0.0160. The dominant emotion is joy.
-```
-
-Blank input returns:
-
-```
-Invalid text! Please try again!
-```
-
-## Running Tests
-
-```bash
-python3 -m unittest -v test_emotion_detection.py
+python3 test_emotion_detection.py
 ```
 
 ## Static Code Analysis
 
-```bash
+```
 python3 -m pip install pylint
 pylint server.py
 ```
@@ -99,4 +83,4 @@ The Watson endpoint used here is typically reachable only from within the IBM Sk
 
 ## Author
 
-EDUARDO P CARABEO JR
+Eduardo P. Carabeo Jr.
