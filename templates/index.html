@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Emotion Detector</title>
+  <script src="{{ url_for('static', filename='mywebscript.js') }}"></script>
+</head>
+<body style="font-family:sans-serif;max-width:600px;margin:40px auto">
+  <h2>Emotion Detector</h2>
+  <textarea id="textToAnalyze" rows="4" style="width:100%" placeholder="Enter your statement here..."></textarea>
+  <br>
+  <button onclick="RunSentimentAnalysis()">Run Emotion Detection</button>
+  <p id="system_response"></p>
+</body>
+</html>
